@@ -1,6 +1,7 @@
 #Arquivos gerados #
 application/logs/
 vendor/
+.env
 
 # Compiled source #
 ###################
