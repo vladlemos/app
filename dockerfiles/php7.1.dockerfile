@@ -1,5 +1,5 @@
 ARG PHP_VERSION=7.1.11-fpm-alpine
-ARG XDEBUG_VERSION=2.5.5
+# ARG XDEBUG_VERSION=2.5.5
 FROM php:${PHP_VERSION}
 ARG UID=root
 ARG GID=root
@@ -19,7 +19,7 @@ RUN docker-php-ext-install \
     mysqli pgsql pdo pdo_dblib pdo_mysql pdo_pgsql sockets xml xsl zip
 
 # Instalando o XDebug
-RUN pecl install xdebug-${XDEBUG_VERSION}
+RUN pecl install xdebug-2.5.5
 RUN docker-php-ext-enable xdebug
 
 # Configurando o XDebug
